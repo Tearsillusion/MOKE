@@ -1,0 +1,22 @@
+<view class='poke_video_list'>
+
+   <view class='poke_video_list_title'>保利·林语溪</view> 
+  <view class='poke_video_list_video'>
+         <video class='tab_con_img' id='myVideo'   src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" binderror="videoErrorCallback" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls poster='../../../../image/video_1.png'>
+         <cover-view class="controls" style="display:{{tab_image}}" bindtap='bindplay'>
+          <cover-image class="img"  src="{{img}}" ></cover-image>
+           <cover-view class='play'>▶</cover-view>
+          <cover-view class='Time'>05:00</cover-view> 
+          </cover-view> 
+         </video>
+  </view>
+  <view class='poke_video_list_brief'>
+    <text>保利地产·林语溪</text>
+    <text>2018年6月</text>
+  </view>
+  <view class='poke_video_list_briefs'>
+    <text>简介</text>
+    <text>墨客丹青是一家综合性专业广告营销策划机构，提供多元、专业、实效的房地产及品牌美学营销方式与新媒体数字传播解决方案。专业地产品牌策划，广告整合推广，微信新媒体策划，数字视频创意制作，媒介整合数字传播运营，微信自媒体公众号服务等综合营销与传播推广服务。用广告专业思维整合多元媒介实效落地方式，为市场提供最高效的多感官交互体验公司介绍墨客丹青是一家综合性专业广告营销策划机构，提供多元、专业、实效的房地产及品牌美学营销方式与新媒体数字传播解决方案。专业地产品牌策划，广告整合推广，微信新媒体策划，数字视频创意制作，媒介整合数字传播运营，微信自媒体公众号服务等综合营销与传播推广服</text>
+  </view>
+
+</view>

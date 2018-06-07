@@ -1,0 +1,91 @@
+/* pages/poke/poke_video_list/poke_video_list.wxss */
+.poke_video_list_title{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-weight: bold;
+}
+
+.poke_video_list_video video{
+  width: 100%; 
+}
+.poke_video_list_video>.img{
+   position: absolute;
+  left: 0;
+  top: 0; 
+  width: 100%;
+  height: 100%;
+  
+}
+.poke_video_list_brief{
+  width: 94%;
+  margin: 0 auto;
+  border-bottom: 1px solid #aaa;
+}
+.poke_video_list_briefs{
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 30rpx
+}
+.poke_video_list_briefs text{
+display: block
+}
+
+.poke_video_list_brief text{
+  display: block
+}
+.poke_video_list_brief>text:nth-of-type(1){
+  font-weight: bold;
+  letter-spacing:2pt;
+  margin-top: 20rpx
+}
+.poke_video_list_brief>text:nth-of-type(2){
+  color: #555;
+  font-size: 25rpx;
+  letter-spacing:2pt;
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+}
+.poke_video_list_briefs>text:nth-of-type(1){
+  font-weight: bold;
+  letter-spacing:2pt; 
+}
+.poke_video_list_briefs>text:nth-of-type(2){
+  font-size: 26rpx;
+  color: #555;
+  letter-spacing:2pt;
+  line-height: 50rpx; 
+}
+.controls{
+  width: 100%;
+  position: relative;
+  height:225px;
+
+
+}
+.play{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.5);
+color: white;
+text-align: center;
+line-height: 225px;
+font-size: 30px;
+}
+.Time{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.5);
+color: white;
+text-align: center;
+line-height: 290px;
+font-size: 30rpx;
+}
+

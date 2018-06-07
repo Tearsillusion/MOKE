@@ -1,0 +1,16 @@
+{
+  "pages":[
+    
+    "pages/poke/poke",
+    "pages/poke/poke_video_list/poke_video_list"
+    
+  ],
+    "window": {
+      "navigationBarTextStyle": "white",
+      "navigationBarTitleText": "墨客丹青",
+      "navigationBarBackgroundColor": "#3c3d41",
+      "backgroundColor": "#3c3d41"
+    }
+ 
+
+}

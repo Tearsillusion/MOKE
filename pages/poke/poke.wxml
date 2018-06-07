@@ -1,0 +1,81 @@
+<view class='Poke' style='height:{{winHeight}}px'>
+
+<!-- 公司简介 -->
+   <view class='Poke_left' style='height:{{winHeight}}px;width:{{winWidth*1.5}}px;margin-left:{{-winWidth}}px'  animation="{{animation}}"  bindtap = "handletap" bindtouchstart = "handletouchtart" >
+    <scroll-view scroll-y="true"  scroll-into-view="{{toView}}"       class='Poke_left_text' bindscroll="scroll"  style='height:{{winHeight}}px;width:{{winWidth}}px;'>
+    <view class='{{scrollT?"Poke_left_title":"Poke_left_titleN"}}' style='width:{{winWidth}}px;'><text bindtap='FontSame' class='{{fontsame?"fa fa-caret-down":"fa fa-caret-up"}}'></text>
+    <text class='Tabtext' bindtap='FontSame'>{{Tabtxt}}</text>
+    </view>
+   
+      <view class='Poke_left_text_text' >
+        
+          <view   wx:for="{{groups}}"  id="{{item.ids}}">
+          <view class='Poke_left_text_text_containerAll' id='drawID'>
+              <text  class='Poke_left_text_text_title'>{{item.shows ? item.title : ''}}</text>
+              <view class='C_Img'><image class='{{item.IMGF? "imgT" :"imgF"}}' src='{{item.show ? item.src : item.def}}' mode="widthFix"></image></view>
+              <view  class='{{showALL?"Poke_left_text_text_container":"Poke_left_text_text_containers"}}'>{{item.shows ? item.txt : item.txts}}</view>
+              <text  class='Poke_left_text_text_load' bindtap='showMore' data-id="{{index}}">{{More}}</text>
+            </view>
+            <view  style='width:100%;height:20rpx;background:#eee'></view>
+            
+          </view>
+        
+      </view>
+  </scroll-view>
+      <view  style='height:{{winHeight}}px;width:{{winWidth*0.5}}px' bindtouchmove="handletouchmoveL" class='{{show?"Poke_left_img" : "Poke_left_imgs"}}'>
+        <text  style='margin-top:{{winHeight*0.465}}px ' class='{{FontT?"Poke_left_font":"Poke_left_fontN"}}' bindtouchstart='FontSame' animation="{{animationImg}}"  bindtap='translate' >公司简介</text>
+      </view>
+  </view>
+  <!-- 导航 -->
+   <view class='Poke_nav' >
+      <text wx:for="{{PokeNav}}" animation="{{animationNav}}" bindtap='jumpTo'   data-opt="{{item.opt}}">{{item.title}}</text>
+    </view>
+     <!-- 蒙版 -->
+    <view bindtap='PokeMasking' class='{{Poke_masking?"Poke_maskingT":"Poke_maskingF"}}'></view>
+   <!-- LOGO     -->
+    <view class='{{LOGO?"Poke_logo":"Poke_logoN"}}'>
+      <image animation="{{animationlogo}}" bindtap='animationLogo' src='../../image/logo3.png'></image>
+      <text animation="{{animationfont}}" >墨客丹青</text>
+    </view>
+  <!-- 项目案例  -->
+    <view class='Poke_right' style='width:{{winWidth*1.5}}px;margin-right :{{-winWidth}}px'  animation="{{animationR}}" >
+
+     <view class='Poke_right_text' style='height:{{winHeight}}px;width:{{winWidth}}px;'>
+     <view class='Poke_right_title' style='z-index:1'></view>
+     <!-- 内容部分 -->
+      
+           <view class='Poke_right_text_text'>
+           
+        <view class='Poke_right_text_text_container'>
+          <view class='Poke_right_text_text_logo'><image src='../../image/logo_1.png'></image></view>
+          <view class='Poke_right_text_text_font'><text>保利集团河南区域顶级产品洛阳首席纯粹别墅洋房社区保利集团河南区域顶级产品洛阳首席纯粹别墅洋</text></view>
+          <view class='Poke_right_text_text_img'>
+            
+              
+                     <swiper indicator-dots="{{indicatorDots}}"  
+                          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='width:100%'>  
+                        <block wx:for="{{imgUrls}}">  
+                          <swiper-item>  
+                            <navigator url="{{item.url}}" hover-class="navigator-hover">  
+                              <image style='width:100%;' src="{{item.image}}" mode="widthFix" class="slide-image"/>  
+                            </navigator>   
+                          </swiper-item>  
+                        </block>  
+                    </swiper>   
+                
+          </view>
+                   <view class='Poke_right_text_text_video' ><navigator class='Poke_right_text_text_video_Img' url="../poke/poke_video_list/poke_video_list" hover-class="none"><image src='../../image/vide0_2.png' mode="widthFix"></image></navigator></view>
+        </view>
+        <view class='Poke_right_text_text_container1'>
+        <view class='Poke_right_text_text_logo1'><image src='../../image/logo_1.png' ></image></view>
+             <view  wx:for="{{group}}" >
+                <image style='width:100%' class="activeT" src="{{item.srcs}}" mode="widthFix"></image>
+              </view> 
+        </view>
+      </view>
+  </view>
+    <view style='height:{{winHeight}}px;width:{{winWidth*0.5}}px'bindtouchmove="handletouchmoveR" class='{{showR?"Poke_right_img":"Poke_right_imgR"}}'><text class='Poke_right_font' style='line-height:{{winHeight}}px' animation="{{animationImgR}}" bindtap='translateR' >项目案例</text></view>
+   
+  </view>
+ 
+</view>
